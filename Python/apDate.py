@@ -1,4 +1,6 @@
-def formatAPDate(date_object):     # via Chris Alcantara and Matthew Dudak, then adapted for Windows by @stucka. Assumes you have an actual date object, not a string.
+# Assumes you have an actual date object, not a string.
+# Work for Window users.
+def formatAPDate(date_object):     
     if date_object.month == 9:
         new_date = "Sept. " +  datetime.datetime.strftime(date_object, "%d, %Y").lstrip("0")
     elif date_object.month < 3 or date_object.month > 7:
@@ -8,12 +10,9 @@ def formatAPDate(date_object):     # via Chris Alcantara and Matthew Dudak, then
     return new_date
 
 
-
-An alternate version, adapting from a string. Will fail on Windows because of %-d
-Python version by Chris Alcantara and Matthew Dudak:
-
-def formatAPDate(date):
-    
+# An alternate version, adapting from a string. 
+# Will fail on Windows because of %-d
+def formatAPDate(date): 
     date_object = datetime.datetime.strptime(date, "%Y-%m-%d")   
     # Handles Sept.
     if date_object.month == 9:
@@ -26,4 +25,4 @@ def formatAPDate(date):
         
     else:
         new_date = datetime.datetime.strftime(date_object, "%B %-d, %Y") 
-return new_date
+        return new_date

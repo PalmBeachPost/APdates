@@ -1,5 +1,6 @@
-// Dates by Chris Alcantara
-function formatDate (dateObj) {
+// If you're using require(),
+// this can be it's own module.
+module.exports = function(dateObj) {
 
   var month, day, year, format_date;
 
@@ -17,8 +18,3 @@ function formatDate (dateObj) {
 
   return format_date;
 }
-
-formatDate('1-2-1992'); // Jan. 2, 1992
-formatDate('1/2/1992'); // Jan. 2, 1992
-formatDate('January 2 1992'); // Jan. 2, 1992
-formatDate('01/02/92'); // Jan. 2, 1992
