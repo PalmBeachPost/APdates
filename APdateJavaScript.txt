@@ -15,7 +15,7 @@ function formatDate (dateObj) {
   
   format_date = month + " " + day + ", " + year;
 
-  return format_date);
+  return format_date;
 }
 
 formatDate('1-2-1992'); // Jan. 2, 1992
