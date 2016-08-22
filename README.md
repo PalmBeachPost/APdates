@@ -8,7 +8,11 @@ We're looking for other ways of formatting dates into AP style. If you have meth
 
 #### Contributors
 [Chris Alcantara](https://twitter.com/chrisalcantara)
+
 [Matthew Dudak](https://twitter.com/mjdudak)
+
 [Ted Han](https://twitter.com/knowtheory)
+
 [Mike Stucka](https://twitter.com/stucka)
+
 [Andrew Tran](https://twitter.com/andrewbtran)
