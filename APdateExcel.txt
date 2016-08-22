@@ -1,0 +1,5 @@
+Just a date, not date and time:
+=SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(B1, "mmmm d, yyyy"), "January", "Jan."), "February", "Feb."), "August", "Aug."), "September", "Sept."), "October", "Oct."), "November", "Nov."), "December", "Dec.")
+
+he below is looking for a date and time, but it's easy enough to change the middle part to whatever you want.
+=SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(A2, "mmmm d, yyyy") & ", at " & TEXT(A2, "h:mm am/pm"), "AM", "a.m."), "PM", "p.m."), "January", "Jan."), "February", "Feb."), "August", "Aug."), "September", "Sept."), "October", "Oct."), "November", "Nov."), "December", "Dec.")

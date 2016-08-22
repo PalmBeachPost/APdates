@@ -1,0 +1,1 @@
+replace(replace(replace(replace(replace(replace(replace(date_format(mydate, "%M %e, %Y"), "January", "Jan."), "February", "Feb."), "August", "Aug."), "September", "Sept."), "October", "Oct."), "November", "Nov."), "December", "Dec.")
