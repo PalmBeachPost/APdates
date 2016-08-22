@@ -20,6 +20,7 @@ Just a date, not date and time:
 
 The below is looking for a date and time, but it's easy enough to change the middle part to whatever you want.
 =SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(A2, "mmmm d, yyyy") & ", at " & TEXT(A2, "h:mm am/pm"), "AM", "a.m."), "PM", "p.m."), "January", "Jan."), "February", "Feb."), "August", "Aug."), "September", "Sept."), "October", "Oct."), "November", "Nov."), "December", "Dec.")
+
 ```
 
 
@@ -51,6 +52,7 @@ formatDate('1-2-1992'); // Jan. 2, 1992
 formatDate('1/2/1992'); // Jan. 2, 1992
 formatDate('January 2 1992'); // Jan. 2, 1992
 formatDate('01/02/92'); // Jan. 2, 1992
+
 ```
 
 
@@ -87,6 +89,7 @@ def formatAPDate(date):
     else:
         new_date = datetime.datetime.strftime(date_object, "%B %-d, %Y") 
 return new_date
+
 ```
 
 
@@ -134,7 +137,8 @@ format_ymd <- function(x) {
   day <- day(x)
   year <- year(x)
   paste0(month, ". ", day, ", ", year)
-}```
+}
+```
 
 
 
@@ -142,6 +146,7 @@ format_ymd <- function(x) {
 
 ```sql
 replace(replace(replace(replace(replace(replace(replace(date_format(mydate, "%M %e, %Y"), "January", "Jan."), "February", "Feb."), "August", "Aug."), "September", "Sept."), "October", "Oct."), "November", "Nov."), "December", "Dec.")
+
 ```
 
 
