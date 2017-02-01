@@ -1,5 +1,10 @@
 # Assumes you have an actual date object, not a string.
 # Work for Window users.
+Text mangling:
+string = string.substitute("January ", "Jan. ").substitute("February ", "Feb. ").substitute("August ", "Aug. ").substitute("September ", "Sept. ").substitute("October ", "Oct. ").substitute("November ", "Nov. ").substitute("December ", "Dec. ")
+
+
+
 def formatAPDate(date_object):     
     if date_object.month == 9:
         new_date = "Sept. " +  datetime.datetime.strftime(date_object, "%d, %Y").lstrip("0")
