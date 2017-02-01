@@ -1,8 +1,8 @@
 # Assumes you have an actual date object, not a string.
 # Work for Window users.
-Text mangling:
-string = string.substitute("January ", "Jan. ").substitute("February ", "Feb. ").substitute("August ", "Aug. ").substitute("September ", "Sept. ").substitute("October ", "Oct. ").substitute("November ", "Nov. ").substitute("December ", "Dec. ")
-
+def ap_string(text):
+    text = text.replace("January ", "Jan. ").replace("February ", "Feb. ").replace("August ", "Aug. ").replace("September ", "Sept. ").replace("October ", "Oct. ").replace("November ", "Nov. ").replace("December ", "Dec. ")
+    return(text)
 
 
 def formatAPDate(date_object):     
