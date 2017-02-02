@@ -1,7 +1,14 @@
 # Assumes you have an actual date object, not a string.
 # Work for Window users.
 def ap_string(text):
-    text = text.replace("January ", "Jan. ").replace("February ", "Feb. ").replace("August ", "Aug. ").replace("September ", "Sept. ").replace("October ", "Oct. ").replace("November ", "Nov. ").replace("December ", "Dec. ")
+    replacementpairs = [
+        ("January 0", "Jan. "), ("February 0", "Feb. "), ("August 0", "Aug. "), ("September 0", "Sept. "), ("October 0", "Oct. "), ("November 0", "Nov. "), ("December 0", "Dec. "),
+        ("March 0", "March "), ("April 0", "April "), ("May 0", "May "), ("June 0", "June "), ("July 0", "July "),
+        ("January ", "Jan. "), ("February ", "Feb. "), ("August ", "Aug. "), ("September ", "Sept. "), ("October ", "Oct. "), ("November ", "Nov. "), ("December ", "Dec. ")
+    ]
+    for pair in replacementpairs:
+        source, destination = pair
+        text = text.replace(source, destination)
     return(text)
 
 
