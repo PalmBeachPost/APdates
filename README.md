@@ -15,4 +15,6 @@ We're looking for other ways of formatting dates into AP style. If you have meth
 
 [Mike Stucka](https://twitter.com/stucka)
 
+[Kavya Sukumar](https://twitter.com/kavyaSukumar)
+
 [Andrew Tran](https://twitter.com/andrewbtran)
