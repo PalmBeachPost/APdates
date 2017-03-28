@@ -1,5 +1,4 @@
-# Assumes you have an actual date object, not a string.
-# Work for Window users.
+# Takes a hunk of text and tries to replace the dates inside.
 def ap_string(text):
     replacementpairs = [
         ("January 0", "Jan. "), ("February 0", "Feb. "), ("August 0", "Aug. "), ("September 0", "Sept. "), ("October 0", "Oct. "), ("November 0", "Nov. "), ("December 0", "Dec. "),
@@ -11,7 +10,8 @@ def ap_string(text):
         text = text.replace(source, destination)
     return(text)
 
-
+# Assumes you have an actual date object, not a string.
+# Work for Window users.
 def formatAPDate(date_object):     
     if date_object.month == 9:
         new_date = "Sept. " +  datetime.datetime.strftime(date_object, "%d, %Y").lstrip("0")
