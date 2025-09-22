@@ -39,7 +39,39 @@ def formatAPDate(date):
         new_date = datetime.datetime.strftime(date_object, "%B %-d, %Y") 
         return new_date
 
+def get_big_timestamp_with_time_first(date_object=None):
+    import datetime
+    if not date_object:
+        date_object = datetime.datetime.now()
+    stamp = ""
+    # comment lines below if you don't want the hour and minute
+    hour = datetime.datetime.strftime(date_object, "%I").lstrip("0")    # Eliminate leading zeroes
+    minutes = datetime.datetime.strftime(date_object, "%M")
+    if minutes == "00":
+        minutes = ""
+    else:
+        minutes = ":" + minutes
+    ampm = datetime.datetime.strftime(date_object, "%p").replace("AM", "a.m.").replace("PM", "p.m.")
+    fulltime = hour + minutes + " " + ampm
+    if fulltime == "12 p.m.":
+        fulltime = noon
+    elif fulltime == "12 a.m.":
+        fulltime = midnight
     
+    stamp += fulltime + " "
+    # comment out below if you don't want "Wednesday" or similar in your string
+    stamp += datetime.datetime.strftime(date_object, "%A, ")
+    if date_object.month == 9:
+        stamp += "Sept. " +  datetime.datetime.strftime(date_object, "%d").lstrip("0")
+    elif date_object.month < 3 or date_object.month > 7:
+        stamp += datetime.datetime.strftime(date_object, "%b. ") + datetime.datetime.strftime(date_object, "%d").lstrip("0")
+    else:
+        stamp += datetime.datetime.strftime(date_object, "%B ") + datetime.datetime.strftime(date_object, "%d").lstrip("0")
+    # uncomment out below if you want the year
+    # stamp += datetime.datetime.strftime(date_object, ", %Y")
+    return(stamp)   
+
+
 def get_big_timestamp(date_object=None):
     import datetime
     if not date_object:
@@ -58,3 +90,4 @@ def get_big_timestamp(date_object=None):
     stamp += ", at "
     stamp += datetime.datetime.strftime(date_object, "%I:%M %p").lstrip("0").replace("AM", "a.m.").replace("PM", "p.m.")
     return(stamp)    
+
